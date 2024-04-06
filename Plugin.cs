@@ -2,9 +2,9 @@
 using Exiled.API.Features;
 using Player = Exiled.Events.Handlers.Player;
 
-public class Namer : Plugin<Config>
+public class Plugin : Plugin<Config>
 {
-    private EventHandlers EventHandler;
+    public static Plugin Instance;
 
     public override string Name { get; } = "Namer";
 
@@ -12,17 +12,22 @@ public class Namer : Plugin<Config>
 
     public override Version Version { get; } = new Version(1, 0, 0);
 
+    public EventHandlers EventHandlers { get; private set; }
+
     public override void OnEnabled()
     {
-        EventHandler = new EventHandlers();
+        Instance = this;
+        EventHandlers = new EventHandlers(this);
+        Player.Spawning += EventHandlers.OnSpawning;
+
         base.OnEnabled();
-        Player.Spawning += EventHandler.OnSpawning;
     }
 
     public override void OnDisabled()
     {
+        Player.Spawning -= EventHandlers.OnSpawning;
+        EventHandlers = null;
+
         base.OnDisabled();
-        Player.Spawning -= EventHandler.OnSpawning;
-        EventHandler = null;
     }
 }

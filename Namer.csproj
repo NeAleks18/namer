@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\CreditsTag.cs" />
-    <Compile Include="Namer.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="EventHandlers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
