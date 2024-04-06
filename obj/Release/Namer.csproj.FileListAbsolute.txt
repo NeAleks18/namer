@@ -1,0 +1,12 @@
+F:\SCPSL\Namer\bin\Release\Namer.dll
+F:\SCPSL\Namer\bin\Release\Namer.pdb
+F:\SCPSL\Namer\bin\Release\Assembly-CSharp.dll
+F:\SCPSL\Namer\bin\Release\CommandSystem.Core.dll
+F:\SCPSL\Namer\bin\Release\Exiled.API.dll
+F:\SCPSL\Namer\bin\Release\Exiled.Events.dll
+F:\SCPSL\Namer\bin\Release\Exiled.Loader.dll
+F:\SCPSL\Namer\obj\Release\Namer.csproj.AssemblyReference.cache
+F:\SCPSL\Namer\obj\Release\Namer.csproj.CoreCompileInputs.cache
+F:\SCPSL\Namer\obj\Release\Namer.csproj.Up2Date
+F:\SCPSL\Namer\obj\Release\Namer.dll
+F:\SCPSL\Namer\obj\Release\Namer.pdb
