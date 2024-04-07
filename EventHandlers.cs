@@ -11,15 +11,9 @@ public class EventHandlers
 
     internal void OnSpawning(SpawningEventArgs ev)
     {
+        ev.Player.DisplayNickname = null;
         if (!ev.Player.IsConnected) return;
         Config cfg = _plugin.Config;
-
-        if (ev.Player.Role == RoleTypeId.None ||
-            ev.Player.Role == RoleTypeId.Spectator ||
-            ev.Player.Role == RoleTypeId.Filmmaker ||
-            ev.Player.Role == RoleTypeId.CustomRole ||
-            ev.Player.Role == RoleTypeId.Overwatch)
-                ev.Player.DisplayNickname = null;
 
         if (ev.Player.IsCHI)
             ev.Player.DisplayNickname = $"{cfg.PrefixHAOS} {cfg.Names[rnd.Next(0, cfg.Names.Count)]}";
